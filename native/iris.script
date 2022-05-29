@@ -1,0 +1,11 @@
+// Unexpire passwords for dev mode
+zn "%SYS"
+do ##class(Security.Users).UnExpireUserPasswords("*")
+
+// create IRISAPP namespace
+do $SYSTEM.OBJ.Load("/opt/irisbuild/Installer.cls", "ck") 
+set sc = ##class(App.Installer).setup() 
+
+do $System.OBJ.LoadDir("/opt/irisbuild/src","ck",,1)
+
+halt

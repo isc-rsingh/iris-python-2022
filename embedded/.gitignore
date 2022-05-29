@@ -1,0 +1,11 @@
+.DS_Store
+oldversion
+
+key/iris.key
+
+#python
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
