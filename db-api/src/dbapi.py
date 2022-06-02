@@ -1,3 +1,4 @@
+# Embedded Python examples from summer 2022
 import iris as dbapi
 
 mytable = "mypydbapi.test_things"

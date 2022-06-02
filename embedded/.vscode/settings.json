@@ -1,10 +1,10 @@
 {
     "objectscript.conn": {
         "active": true,
-        "ns": "USER", 
+        "ns": "IRISAPP",
         "username": "SuperUser",
         "password": "SYS",
         "port": 52773,
-        "host": "localhost"
+        "host": "127.0.0.1"
     }
 }

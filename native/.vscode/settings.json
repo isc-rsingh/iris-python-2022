@@ -1,0 +1,21 @@
+{
+    "files.associations": {
+        "Dockerfile*": "dockerfile",
+        "iris.script": "objectscript"
+    },
+    "objectscript.conn": {
+        "active": true,
+        "ns": "IRISAPP",
+        "host": "localhost",
+        "username": "SuperUser",
+        "password": "SYS",
+        "docker-compose": {
+            "service": "iris-dx",
+            "internalPort": 52773
+        },
+        "links": {
+            "UnitTest Portal": "${serverUrl}/csp/sys/%25UnitTest.Portal.Home.cls?$NAMESPACE=IRISAPP"
+        }
+    }
+
+}

@@ -1,4 +1,4 @@
-Class Installer
+Class App.Installer
 {
 
 XData setup

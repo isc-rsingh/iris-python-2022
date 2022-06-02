@@ -2,16 +2,21 @@
 Class Sample.EmbeddedPython Extends %RegisteredObject
 {
 
+ClassMethod dfexample() As %Status
+{
+    set st = ..CreateDataFrame("Name, Super, TimeCreated")
+}
+
 // Execute a SQL query from Python and import it into a pandas dataframe
 
-ClassMethod CreateDataframe() As %Numeric [ Language = python ]
+ClassMethod CreateDataFrame(myfields As %String) As %Numeric [ Language = python ]
 {
     import iris
     import pandas as pd
     #; works with all IRIS installs
-    rs = iris.sql.exec("select Name, Super, TimeCreated from %Dictionary.ClassDefinition WHERE Name %STARTSWITH '%Net.'")
+    rs = iris.sql.exec("SELECT " + myfields + " FROM %Dictionary.ClassDefinition WHERE Name %STARTSWITH '%Net.'")
     #; works with Titanic sample data
-    rs = iris.sql.exec("select * from Data.Titanic")
+    #; rs = iris.sql.exec("SELECT " + fields + " FROM Data.Titanic")
     df = rs.dataframe()
     print(df.describe())
     return True

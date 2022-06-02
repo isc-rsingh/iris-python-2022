@@ -1,6 +1,6 @@
 version: '3.6'
 services:
-  iris:
+  iris-dx:
     command: --check-caps false
     build:
       context: .
