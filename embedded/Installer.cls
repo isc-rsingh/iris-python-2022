@@ -6,12 +6,15 @@ XData setup
 <Manifest>
   <Default Name="Namespace" Value="IRISAPP"/>
   <Default Name="database" Value="irisapp"/>
+  <Default Name="mgruser" Value="irisowner"/>
   
   <Namespace Name="${Namespace}" Code="${Namespace}" Data="${Namespace}" Create="yes" Ensemble="no">
 
     <Configuration>
       <Database Name="${Namespace}" Dir="${mgrdir}${database}/data" Create="yes" Resource="%DB_${Namespace}"/>
     </Configuration>
+
+    <User Username="${mgruser}" Namespace="${Namespace}" Roles="%All" />
   </Namespace>
 </Manifest>
 }
