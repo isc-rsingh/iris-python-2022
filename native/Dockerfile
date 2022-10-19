@@ -1,6 +1,6 @@
 # For an M1 Mac, comment the line below and uncomment the one pulling irishealth-community-arm64
-#ARG IMAGE=containers.intersystems.com/intersystems/iris-community:2022.1.0.199.0
-ARG IMAGE=containers.intersystems.com/intersystems/iris-community-arm64:2022.1.0.199.0
+#ARG IMAGE=containers.intersystems.com/intersystems/iris-community:2022.1.0.209.0
+ARG IMAGE=containers.intersystems.com/intersystems/iris-community-arm64:2022.1.0.209.0
 
 FROM $IMAGE
 USER root
